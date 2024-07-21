@@ -29,6 +29,7 @@ public class BasePage extends BaseClass{
 		ObjLogin = new LoginSaucePage(driver);
 		objProductsPage= new ProductsPage(driver);
 		objCartPage = new CartPage(driver);
+		objCheckoutPage = new checkoutpage(driver);
 		
 		/**Nop-commerence page intialzation*/
 		objNopLoginPage= new LoginPage(driver);
@@ -41,6 +42,7 @@ public class BasePage extends BaseClass{
 		ObjLogin = null;
 		objProductsPage= null;
 		objCartPage = null;
+		objCheckoutPage =null;
 		/**Nop-commerence page destory*/
 		objNopLoginPage = null;
 		objnopHomePage = null;
