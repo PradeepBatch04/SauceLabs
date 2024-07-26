@@ -4,12 +4,12 @@ Feature: nopcommerce
     When do login using "admin@yourstore.com" and "admin" credentials
     Then verify the dashboard displayed
     When Click the "Configuration" from the menu
-    #And Click on the "Customer roles" in Catalog
+    And Click on the "Customer roles" in Catalog
     And Click on the subItem "Settings" and subsubItem "Tax settings" in Catalog
-    #When fill the filter details of Product "<Productname>" "<Category>" "<Published>" "<SKU>"
-    #And Click on Search button
-    #Then Verify the record in Products table "<Productname>" "<SKU>" "<Price>" "<Stockquantity>" "<Published>" "checkbox"
-    #And Click on Logout
+    When fill the filter details of Product "<Productname>" "<Category>" "<Published>" "<SKU>"
+    And Click on Search button
+    Then Verify the record in Products table "<Productname>" "<SKU>" "<Price>" "<Stockquantity>" "<Published>" "checkbox"
+    And Click on Logout
 
     Examples: 
       | Productname             | Category              | Published      | SKU       | Price | Stockquantity |

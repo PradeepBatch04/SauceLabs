@@ -1,6 +1,5 @@
 package common;
 
-import org.openqa.selenium.devtools.v115.security.model.SecurityStateChanged;
 
 import pages.CartPage;
 import pages.LoginSaucePage;
@@ -9,6 +8,11 @@ import pages.checkoutpage;
 import pages.nopcommerence.HomePage;
 import pages.nopcommerence.LoginPage;
 import pages.nopcommerence.ProductPage;
+import pages.orangehrm.AdminPageHRM;
+import pages.orangehrm.HomePageHRM;
+import pages.orangehrm.LoginPageHRM;
+import pages.orangehrm.LogoutPageHRM;
+import pages.orangehrm.RecruitmentPage;
 
 public class BasePage extends BaseClass{
  
@@ -24,6 +28,15 @@ public class BasePage extends BaseClass{
 	public static HomePage objnopHomePage;
 	public static ProductPage objnopProductPage;
 	
+	/**OrangeHRM page*/
+	
+	public static LoginPageHRM objhrmLoginPage;
+	public static HomePageHRM objhrmHomePage;
+	public static AdminPageHRM objhrmAdminPage;
+	public static LogoutPageHRM objhrmLogoutPage;
+	public static RecruitmentPage objhrmRecruitmentPage;
+	
+	
 	
 	public static void PageObectInitialization() {
 		ObjLogin = new LoginSaucePage(driver);
@@ -36,6 +49,15 @@ public class BasePage extends BaseClass{
 		objnopHomePage= new HomePage(driver);
 		objnopProductPage= new ProductPage(driver);
 		
+		/**OrangeHRM page intialzation*/
+		objhrmLoginPage= new LoginPageHRM(driver);
+		objhrmHomePage= new HomePageHRM(driver);
+		objhrmAdminPage= new AdminPageHRM(driver);
+		objhrmLogoutPage= new LogoutPageHRM(driver);
+		objhrmRecruitmentPage= new RecruitmentPage(driver);
+		
+		
+		
 	}
 
 	public static void destroyPageObjects() {
@@ -47,6 +69,13 @@ public class BasePage extends BaseClass{
 		objNopLoginPage = null;
 		objnopHomePage = null;
 		objnopProductPage = null;
+		
+		/**OrangeHRM page destory*/
+		objhrmLoginPage= null;
+		objhrmHomePage= null;
+		objhrmAdminPage= null;
+		objhrmLogoutPage =null;
+		objhrmRecruitmentPage = null;
 		
 	}
 
