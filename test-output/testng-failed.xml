@@ -9,7 +9,7 @@
           <include name="beforeClass"/>
           <include name="tearDownClass"/>
           <include name="afterClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario"/>
         </methods>
       </class> <!-- runner.TestNGRunner -->
     </classes>
