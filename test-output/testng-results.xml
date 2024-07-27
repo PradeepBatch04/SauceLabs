@@ -1,71 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-27T09:35:32 IST" name="Default suite" finished-at="2024-07-27T09:35:33 IST" duration-ms="333">
+  <suite started-at="2024-07-27T22:10:41 IST" name="Default suite" finished-at="2024-07-27T22:11:14 IST" duration-ms="33651">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@d23e042]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@4082ba93]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-07-27T09:35:32 IST" name="Default test" finished-at="2024-07-27T09:35:33 IST" duration-ms="333">
+    <test started-at="2024-07-27T22:10:41 IST" name="Default test" finished-at="2024-07-27T22:11:14 IST" duration-ms="33651">
       <class name="runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestNGRunner@d23e042]" started-at="2024-07-27T09:35:32 IST" name="setUpClass" finished-at="2024-07-27T09:35:32 IST" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestNGRunner@4082ba93]" started-at="2024-07-27T22:10:41 IST" name="setUpClass" finished-at="2024-07-27T22:10:41 IST" duration-ms="213" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3f446bef]]>
+                <![CDATA[org.testng.TestRunner@5dbb50f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:runner.TestNGRunner@d23e042]" started-at="2024-07-27T09:35:32 IST" name="beforeClass" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1722053132996" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated beforeClass.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated beforeClass.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
-at org.testng.internal.Parameters.createParameters(Parameters.java:693)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:runner.TestNGRunner@4082ba93]" started-at="2024-07-27T22:10:41 IST" name="beforeClass" finished-at="2024-07-27T22:10:47 IST" duration-ms="5543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@d23e042]" started-at="2024-07-27T09:35:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-27T09:35:33 IST" duration-ms="0" status="SKIP">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@4082ba93]" started-at="2024-07-27T22:10:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-27T22:11:14 IST" duration-ms="27677" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Create new user and verify the user"]]>
+                <![CDATA["Login into OrangeHRM and Logout"]]>
               </value>
             </param>
             <param index="1">
@@ -74,50 +38,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated beforeClass.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+              <![CDATA[expected [] but found [Admin]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated beforeClass.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
-at org.testng.internal.Parameters.createParameters(Parameters.java:693)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+              <![CDATA[java.lang.AssertionError: expected [] but found [Admin]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at pages.orangehrm.AdminPageHRM.tablerowusernamevalue(AdminPageHRM.java:113)
+at pages.orangehrm.AdminPageHRM.rowsinTable(AdminPageHRM.java:96)
+at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:41)
+at ✽.Verify record "Admin", "Admin", "manda user" and "Enabled"(file:///Users/mani/Desktop/Java_selenium/Core%20Java/Github/SauceLabs/src/test/resources/Features/OrangeHRM.feature:14)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:runner.TestNGRunner@d23e042]" started-at="2024-07-27T09:35:33 IST" name="afterClass" finished-at="2024-07-27T09:35:33 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:runner.TestNGRunner@4082ba93]" started-at="2024-07-27T22:11:14 IST" name="afterClass" finished-at="2024-07-27T22:11:14 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestNGRunner@d23e042]" started-at="2024-07-27T09:35:33 IST" name="tearDownClass" finished-at="2024-07-27T09:35:33 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestNGRunner@4082ba93]" started-at="2024-07-27T22:11:14 IST" name="tearDownClass" finished-at="2024-07-27T22:11:14 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

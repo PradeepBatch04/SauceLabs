@@ -9,17 +9,16 @@ import io.cucumber.testng.CucumberOptions;
     
 @CucumberOptions(
 		features = {"src/test/resources/Features/OrangeHRM.feature"}, 	
-		glue = {"stepdefination"}
-//		tags = "@User"
+		glue = {"stepdefination"},
+		tags = "@Login"
                 
 				)
     
 public class TestNGRunner extends AbstractTestNGCucumberTests {
-	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass(String browser) {
+	public void beforeClass() {
 		
-		BasePage.launchBrowser(browser);
+		BasePage.launchBrowser("chrome");
 		BasePage.getURL("https://opensource-demo.orangehrmlive.com/");
 		BasePage.PageObectInitialization();
 		

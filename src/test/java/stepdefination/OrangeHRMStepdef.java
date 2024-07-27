@@ -20,19 +20,25 @@ public class OrangeHRMStepdef extends BasePage{
     	objhrmHomePage.selectMenuItem(items);
     }
     
-    @Then("Verify Username, User Role, Employee Name, Status fields are displayed")
-    public void Field_display() {
-//    	objhrmAdminPage.fields_aredisplayed();
+    
+    @Then("Verify {string}, {string}, {string} and {string}  fields are displayed")
+    public void Field_display(String Username, String User_Role, String Employee_Name, String Status) throws InterruptedException {
+    	objhrmAdminPage.fields_aredisplayed(Username, User_Role, Employee_Name, Status);
     }
     
-    @And("fill {string} field")
-    public void Field_fill(String Username) {
-    	objhrmAdminPage.enter_data_into_field(Username);
-    }
+//    @And("fill {string} field")
+//    public void Field_fill(String Username) {
+//    	objhrmAdminPage.enter_data_into_field(Username);
+//    }
     
     @Then("click on the search")
     public void Search_click() {
     	objhrmAdminPage.searchbtn();
+    }
+    
+    @And("Verify record {string}, {string}, {string} and {string}")
+    public void verify_record(String Username, String User_Role, String Employee_Name, String Status) throws InterruptedException{
+    	objhrmAdminPage.rowsinTable(Username, User_Role, Employee_Name, Status);
     }
     
     @When("click on the {string}")
@@ -75,8 +81,8 @@ public class OrangeHRMStepdef extends BasePage{
     public void click_on(String Search) {
         
     }
-    @Then("Verify the record")
-    public void verify_the_record() {
+    @Then("Verify the record {string}, {string}, {string} and {string}")
+    public void verify_the_record(String Username, String User_Role, String Employee_Name, String Status) {
     	
     }
     
