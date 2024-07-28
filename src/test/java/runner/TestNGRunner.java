@@ -15,11 +15,12 @@ import io.cucumber.testng.CucumberOptions;
 				)
     
 public class TestNGRunner extends AbstractTestNGCucumberTests {
+	@Parameters({"browser","URL"})
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass(String browser,String url) {
 		
-		BasePage.launchBrowser("chrome");
-		BasePage.getURL("https://opensource-demo.orangehrmlive.com/");
+		BasePage.launchBrowser(browser);
+		BasePage.getURL(url);
 		BasePage.PageObectInitialization();
 		
 	}

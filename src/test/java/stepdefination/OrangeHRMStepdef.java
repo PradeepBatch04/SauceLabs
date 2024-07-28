@@ -1,4 +1,6 @@
 package stepdefination;
+import org.testng.annotations.Test;
+
 import common.BasePage;
 import io.cucumber.java.en.*;
 
@@ -21,7 +23,7 @@ public class OrangeHRMStepdef extends BasePage{
     }
     
     
-    @Then("Verify {string}, {string}, {string} and {string}  fields are displayed")
+    @Then("Enter {string}, {string}, {string} and {string} filter fields")
     public void Field_display(String Username, String User_Role, String Employee_Name, String Status) throws InterruptedException {
     	objhrmAdminPage.fields_aredisplayed(Username, User_Role, Employee_Name, Status);
     }
@@ -35,10 +37,10 @@ public class OrangeHRMStepdef extends BasePage{
     public void Search_click() {
     	objhrmAdminPage.searchbtn();
     }
-    
-    @And("Verify record {string}, {string}, {string} and {string}")
-    public void verify_record(String Username, String User_Role, String Employee_Name, String Status) throws InterruptedException{
-    	objhrmAdminPage.rowsinTable(Username, User_Role, Employee_Name, Status);
+ 
+    @And("Verify record {string}, {string}, {string}, {string} and {string}")
+    public void verify_record(String Username, String User_Role, String Employee_Name, String Status,String action) throws InterruptedException{
+    	objhrmAdminPage.verifyRecord(Username, User_Role, Employee_Name, Status,action);
     }
     
     @When("click on the {string}")

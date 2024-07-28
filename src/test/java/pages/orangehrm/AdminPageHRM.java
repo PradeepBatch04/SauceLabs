@@ -1,11 +1,16 @@
 package pages.orangehrm;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -18,6 +23,7 @@ public class AdminPageHRM {
 	
 	WebDriver driver;
 	WaitState objwait;
+
 	@FindBy(how = How.XPATH ,using="(//input[@class='oxd-input oxd-input--active'])[2]") private WebElement UsernameElement;
 	@FindBy(how = How.XPATH ,using="(//div[@class='oxd-select-text oxd-select-text--active'])[1]") private WebElement UserRoleElement;
 	@FindBy(how = How.XPATH ,using="//input[@placeholder='Type for hints...']") private WebElement EmployeeElement;
@@ -29,9 +35,11 @@ public class AdminPageHRM {
 			@FindBy(how = How.XPATH,using = "//div[@role='listbox']//child::div")
 			) private List<WebElement> valuesElements;
 	
+	/**Pradeep- Xpath for div_rows***/
 	@FindAll(
-			@FindBy(how = How.XPATH,using = "//div[@class='oxd-table-body']//div[@class='oxd-table-card']//following-sibling::div[@role='cell']")
-			) private List<WebElement> tablevaluesElements;
+			@FindBy(how = How.XPATH,using = "//div[@class='oxd-table-body']//descendant::div[@role='row']")
+			) private List<WebElement> rowsElements;
+	
 	@FindAll(
 			@FindBy(how = How.XPATH,using = "//div[@class='oxd-table-body']//div[@role='row']")
 			) private List<WebElement> tablerowsElements;
@@ -42,6 +50,7 @@ public class AdminPageHRM {
 		
 		PageFactory.initElements(driver,this);	
 		objwait = new WaitState(driver);
+		this.driver=driver;
 		
 	}
 	
@@ -88,15 +97,14 @@ public class AdminPageHRM {
 		searchElement.click();
 	}
 	
-	public void rowsinTable(String Username, String User_Role, String Employee_Name, String Status) throws InterruptedException {
-		System.out.println("No.of rows in table "+tablerowsElements.size());
-		int row = tablevaluesElements.size();
-		System.out.println("No of rows in this table : " + row);
-		Thread.sleep(5000);
-		tablerowusernamevalue(Username);
+	public void verifyRecord(String Username, String User_Role, String Employee_Name, String Status,String action) throws InterruptedException {
+		ArrayList<String> cellsValues= new ArrayList<String>(); //add the filter values according to row.
+	    Collections.addAll(cellsValues, "",Username,User_Role,Employee_Name,Status,""); // added values according to row
+		divtable_VerifyRecord(rowsElements, cellsValues,action);
+		
 		
 	}
-	
+	/****************DIV Dropdown*******************/
 	private void divSelectByText(String text) {
 		for(WebElement element:valuesElements) {
 			String value=element.getText().trim();
@@ -107,12 +115,64 @@ public class AdminPageHRM {
 		}
 	}
 	
-	private void tablerowusernamevalue(String text) {
-		for(WebElement element:tablevaluesElements) {
-			String value=element.getText().trim();
-			Assert.assertEquals(text, value);
-			}
-		}
-	}
+	/****************DIV TABLE*******************
+	 * 1. Collection of rows
+	 * 2. collection of values
+	 * */
+    private void divtable_VerifyRecord(List<WebElement> rows,ArrayList<String> cellsValues,String action) {
+     try {
+    	  int count = 0;
+    	   JavascriptExecutor jsExecutor= (JavascriptExecutor) driver;
+		  for(WebElement row:rows) {
+			  count=0;
+			  jsExecutor.executeScript("arguments[0].scrollIntoView();", row);
+			  List<WebElement> cellsElements = row.findElements(By.xpath("child::div[@role='cell']"));
+			  for(int i=0;i<cellsElements.size();i++) {
+				  String actual=cellsElements.get(i).getText();
+				  String expected=cellsValues.get(i);
+				  if(actual.contains(expected)) {
+					 count++; 
+				  }
+				  if(count==cellsValues.size()&&action.equalsIgnoreCase("filter")) {
+					  System.out.println("Record Matched");
+					  Assert.assertTrue(true);
+					  break;
+				  }
+				  if(count==cellsValues.size()&&action.equalsIgnoreCase("checkbox")) {
+//					  cellsElements.get(0).findElement(By.xpath("descendant::input")).click();
+					  WebElement element=cellsElements.get(0).findElement(By.xpath("descendant::input"));
+					  JavascriptExecutor executor = (JavascriptExecutor)driver;
+					  executor.executeScript("arguments[0].click();", element);
+					  System.out.println("Click on CheckBox");
+					  Assert.assertTrue(true);
+					  break;
+				  }
+				  if(count==cellsValues.size()&&action.equalsIgnoreCase("delete")) {
+					  cellsElements.get(5).findElement(By.xpath("descendant::button[1]")).click();
+					  System.out.println("Click on DeleteIcon");
+					  Assert.assertTrue(true);
+					  break;
+					  
+				  }
+				  if(count==cellsValues.size()&&action.equalsIgnoreCase("EditIcon")) {
+					  cellsElements.get(5).findElement(By.xpath("descendant::button[2]")).click();
+					  System.out.println("Click on EditIcon");
+					  Thread.sleep(5000);
+					  Assert.assertTrue(true);
+					  break;
+			
+				  }
+				  
+			  }
+		  }	
+		  if(count<6) {
+			  Assert.fail("Record not Matched");
+		  }
+		} catch (Exception e) {
+			e.printStackTrace();
+	  }
+    }
+}
+	
 
 

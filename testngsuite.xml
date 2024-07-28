@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ResponsiveED_LMS-SIS enviroment">
-
-
-
-	<test name="Insistute">
+<suite name="Local RUN">
+ 	
+	<test name="ORange_HRM">
 		<parameter name="browser" value="chrome" />
+		<parameter name="URL" value="https://opensource-demo.orangehrmlive.com/" />
 		<classes>
-			<class name="runner.TestNGRunner" />						
+			<class name="runner.TestNGRunner" />								
 		</classes>
 	</test>
+	
+	
 
 </suite>

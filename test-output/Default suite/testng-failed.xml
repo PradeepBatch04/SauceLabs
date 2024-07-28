@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.TestNGRunner">
+      <class name="stepdefination.Test2">
         <methods>
-          <include name="setUpClass"/>
-          <include name="beforeClass"/>
-          <include name="tearDownClass"/>
-          <include name="afterClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="Orange"/>
+          <include name="Ball"/>
         </methods>
-      </class> <!-- runner.TestNGRunner -->
+      </class> <!-- stepdefination.Test2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

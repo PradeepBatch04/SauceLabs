@@ -6,18 +6,16 @@ Feature: OrangeHRM
   Scenario Outline: Login into OrangeHRM and Logout
     When login using username as "Admin" and password "admin123"
     Then Verify that Dashboard is dispalyed
-    When Click on the "Leave" from the menu
     When Click on the "Admin" from the menu
-    Then Verify "<Username>", "<User Role>", "<Employee Name>" and "<Status>"  fields are displayed
-    #And fill "Admin" field
+    Then Enter "<Username>", "<UserRole>", "<EmployeeName>" and "<Status>" filter fields
     Then click on the search
-    And Verify record "<Username>", "<User Role>", "<Employee Name>" and "<Status>"
+    And Verify record "<Username>", "<UserRole>", "<EmployeeName>", "<Status>" and "EditIcon"
     When click on the "Logout"
     Then Loginpage should be redisplayed
 
     Examples: 
-      | Username | User Role | Employee Name | Status   |
-      | Admin  | Admin       | manda user | Enabled|
+      | Username | UserRole | EmployeeName | Status  |
+      | FMLName1  | ESS      | FName LName | Enabled |
 
   @User
   Scenario: Create new user and verify the user
