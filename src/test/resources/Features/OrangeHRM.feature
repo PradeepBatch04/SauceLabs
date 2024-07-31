@@ -15,9 +15,9 @@ Feature: OrangeHRM
 
     Examples: 
       | Username | UserRole | EmployeeName | Status  |
-      | FMLName1  | ESS      | FName LName | Enabled |
+      | FMLName1 | ESS      | FName LName  | Enabled |
 
-  @User
+  @AddUserinRecruitment
   Scenario: Create new user and verify the user
     When login using username as "Admin" and password "admin123"
     Then Verify that Dashboard is dispalyed
@@ -34,3 +34,24 @@ Feature: OrangeHRM
     Then Verify the record
     When click on the "Logout"
     Then Loginpage should be redisplayed
+
+
+#add user in admin page -- vineesha
+  @AddUserinAdmin
+  Scenario Outline: Create new user and verify the user in adminpage
+    When login using username as "Admin" and password "admin123"
+    Then Verify that Dashboard is dispalyed
+    Then Click on the "Admin" from the menu
+    And click on the Add button to add user
+    When Fill mandatory fields "UserRole" "EmployeeName" "Status" "Username" "Password" "ConfirmPassword"
+    Then click on the "Save" button
+    When Click on the "Admin" from the menu
+    Then Enter "<Username>", "<UserRole>", "<EmployeeName>" and "<Status>" filter fields
+    Then click on the search
+    And Verify record "<Username>", "<UserRole>", "<EmployeeName>", "<Status>" and "EditIcon"
+    When click on the "Logout"
+    Then Loginpage should be redisplayed
+
+    Examples: 
+      | Username | UserRole | EmployeeName | Status  | Password | ConfirmPassword |
+      | FMLName1 | ESS      | FName LName  | Enabled | vvvv     | vvvv            |

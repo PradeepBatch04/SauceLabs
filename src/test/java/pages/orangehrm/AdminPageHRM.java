@@ -44,6 +44,11 @@ public class AdminPageHRM {
 			@FindBy(how = How.XPATH,using = "//div[@class='oxd-table-body']//div[@role='row']")
 			) private List<WebElement> tablerowsElements;
 	
+	/**vineesha**/
+	@FindBy(how = How.XPATH, using = "//button[text()=' Add ']") private WebElement addbuttonElement;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[1]") private WebElement PasswordElement;
+	@FindBy(how = How.XPATH, using = "(//input[@type='password'])[2]") private WebElement ConfirmPasswordElement;
+	
 	
 	
 	public AdminPageHRM(WebDriver driver) {
@@ -100,10 +105,60 @@ public class AdminPageHRM {
 	public void verifyRecord(String Username, String User_Role, String Employee_Name, String Status,String action) throws InterruptedException {
 		ArrayList<String> cellsValues= new ArrayList<String>(); //add the filter values according to row.
 	    Collections.addAll(cellsValues, "",Username,User_Role,Employee_Name,Status,""); // added values according to row
-		divtable_VerifyRecord(rowsElements, cellsValues,action);
-		
-		
+		divtable_VerifyRecord(rowsElements, cellsValues,action);	
 	}
+	
+	public void addButton() {
+		addbuttonElement.click();
+	}
+	
+	
+	public void add_user(String UserRole, String EmployeeName, String Status, String Username, String Password, String ConfirmPassword) throws InterruptedException {
+		//username
+				objwait.elementToBeClickable(UsernameElement);
+				UsernameElement.isDisplayed();
+				System.out.println("username fied is dispalyed");
+				UsernameElement.sendKeys(Username);
+				
+				//userrole
+				objwait.elementToBeClickable(UserRoleElement);
+				UserRoleElement.isDisplayed();
+				UserRoleElement.click();
+				divSelectByText(UserRole);
+				System.out.println("UserRole fied is dispalyed");
+				
+				
+				//employeename
+				objwait.elementToBeClickable(EmployeeElement);
+				EmployeeElement.isDisplayed();
+				System.out.println("Employee Name fied is dispalyed");
+				EmployeeElement.sendKeys(EmployeeName);
+				Thread.sleep(2000);
+				EmployeeElement.sendKeys(Keys.ARROW_DOWN,Keys.ENTER);
+				
+				//status
+				objwait.elementToBeClickable(StatusElement);
+				StatusElement.isDisplayed();
+				System.out.println("Status fied is dispalyed");
+				StatusElement.click();
+				Thread.sleep(5000);
+				divSelectByText(Status);
+				
+				//password
+				objwait.elementToBeClickable(PasswordElement);
+				UsernameElement.isDisplayed();
+				System.out.println("password fied is dispalyed");
+				UsernameElement.sendKeys(Password);
+				
+				//confirmpassword
+				objwait.elementToBeClickable(ConfirmPasswordElement);
+				UsernameElement.isDisplayed();
+				System.out.println("ConfirmPassword fied is dispalyed");
+				UsernameElement.sendKeys(ConfirmPassword);
+				
+				
+	}
+	
 	/****************DIV Dropdown*******************/
 	private void divSelectByText(String text) {
 		for(WebElement element:valuesElements) {

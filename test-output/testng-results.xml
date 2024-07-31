@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-28T10:47:53 IST" name="Local RUN" finished-at="2024-07-28T10:48:44 IST" duration-ms="50750">
+  <suite started-at="2024-07-31T14:29:55 IST" name="Local RUN" finished-at="2024-07-31T14:31:00 IST" duration-ms="64454">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@5dafbe45]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@55de24cc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-07-28T10:47:53 IST" name="ORange_HRM" finished-at="2024-07-28T10:48:44 IST" duration-ms="50750">
+    <test started-at="2024-07-31T14:29:55 IST" name="ORange_HRM" finished-at="2024-07-31T14:31:00 IST" duration-ms="64454">
       <class name="runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestNGRunner@5dafbe45]" started-at="2024-07-28T10:47:53 IST" name="setUpClass" finished-at="2024-07-28T10:47:54 IST" duration-ms="242" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:29:55 IST" name="setUpClass" finished-at="2024-07-31T14:29:55 IST" duration-ms="325" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5a936e64]]>
+                <![CDATA[org.testng.TestRunner@163042ea]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:runner.TestNGRunner@5dafbe45]" started-at="2024-07-28T10:47:54 IST" name="beforeClass" finished-at="2024-07-28T10:48:10 IST" duration-ms="16289" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:29:55 IST" name="beforeClass" finished-at="2024-07-31T14:30:37 IST" duration-ms="42035" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@5dafbe45]" started-at="2024-07-28T10:48:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-28T10:48:44 IST" duration-ms="33524" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:30:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-31T14:30:59 IST" duration-ms="21662" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,14 +50,28 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Record not Matched]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Record not Matched
+at org.testng.Assert.fail(Assert.java:110)
+at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
+at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
+at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
+at ✽.Verify record "FMLName1", "ESS", "FName LName", "Enabled" and "EditIcon"(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:runner.TestNGRunner@5dafbe45]" started-at="2024-07-28T10:48:44 IST" name="afterClass" finished-at="2024-07-28T10:48:44 IST" duration-ms="626" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:30:59 IST" name="afterClass" finished-at="2024-07-31T14:31:00 IST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestNGRunner@5dafbe45]" started-at="2024-07-28T10:48:44 IST" name="tearDownClass" finished-at="2024-07-28T10:48:44 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:31:00 IST" name="tearDownClass" finished-at="2024-07-31T14:31:00 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

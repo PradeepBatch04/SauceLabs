@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ORange_HRM</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jul 28 10:47:53 IST 2024</td>
+<td>Started on:</td><td>Wed Jul 31 14:29:55 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>50 seconds (50750 ms)</td>
+<tr><td>Total time:</td><td>64 seconds (64454 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,9 +77,21 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login into OrangeHRM and Logout", "OrangeHRM"</td>
-<td></td>
-<td>33</td>
-<td>runner.TestNGRunner@5dafbe45</td></tr>
+<td><div><pre>java.lang.AssertionError: Record not Matched
+	at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
+	at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
+	at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
+	at ✽.Verify record &quot;FMLName1&quot;, &quot;ESS&quot;, &quot;FName LName&quot;, &quot;Enabled&quot; and &quot;EditIcon&quot;(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555928242", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1555928242'><pre>java.lang.AssertionError: Record not Matched
+	at org.testng.Assert.fail(Assert.java:110)
+	at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
+	at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
+	at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
+	at ✽.Verify record &quot;FMLName1&quot;, &quot;ESS&quot;, &quot;FName LName&quot;, &quot;Enabled&quot; and &quot;EditIcon&quot;(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
+</pre></div></td>
+<td>21</td>
+<td>runner.TestNGRunner@55de24cc</td></tr>
 </table><p>
 </body>
 </html>

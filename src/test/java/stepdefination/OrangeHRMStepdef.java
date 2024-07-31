@@ -28,11 +28,6 @@ public class OrangeHRMStepdef extends BasePage{
     	objhrmAdminPage.fields_aredisplayed(Username, User_Role, Employee_Name, Status);
     }
     
-//    @And("fill {string} field")
-//    public void Field_fill(String Username) {
-//    	objhrmAdminPage.enter_data_into_field(Username);
-//    }
-    
     @Then("click on the search")
     public void Search_click() {
     	objhrmAdminPage.searchbtn();
@@ -56,12 +51,14 @@ public class OrangeHRMStepdef extends BasePage{
     
     @Then("click on the Add button to add user")
     public void click_on_the_add_button_to_add_user() {
-    	objhrmRecruitmentPage.addButton();
+    	
     }
 
-    @Then("Verify that Recruitment page is dispalyed")
-    public void verify_that_Recruitment_page_is_dispalyed() {
-    	objhrmRecruitmentPage.pageTitle();
+    
+    @When("Fill mandatory fields {string} {string} {string} {string} {string} {string}")
+    public void fill_mandatory_fields(String UserRole, String EmployeeName, String Status, String Username, String Password, String ConfirmPassword) {
+    	
+    	
     }
 
     @When("Fill mandatory fields {string}, {string}, {string}")
