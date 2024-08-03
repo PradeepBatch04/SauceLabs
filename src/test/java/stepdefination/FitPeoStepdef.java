@@ -1,6 +1,9 @@
 package stepdefination;
 
+import java.util.*;
+
 import common.BasePage;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 
 public class FitPeoStepdef extends BasePage{
@@ -23,7 +26,8 @@ public class FitPeoStepdef extends BasePage{
 
 	@Then("Adjust the slider to {int}")
 	public void adjust_the_slider_to(int value) {
-	   objRevenueCalculator.adjustSlider(value);
+		
+	objRevenueCalculator.adjustSlider_auto(value);
 	}
 	
 	@Then("bottom text field value should be updated to {int}")
@@ -40,6 +44,22 @@ public class FitPeoStepdef extends BasePage{
 	public void verify_slider_s_position_is_updated_to(Integer value) {
 		objRevenueCalculator.verifysliderpositionupdated(value);
 	}
+	
+	@When("select the checkboxes")
+	public void select_the_checkboxes(DataTable dt) {
+		List<Map<String, String>> datatable =dt.asMaps();
+		for(int i=0;i<datatable.size();i++) {
+			String checkbox=datatable.get(i).get("Checkboxes").trim();
+			objRevenueCalculator.selectCheckBoxes(checkbox);
+		}
+	  
+	}
+
+	@Then("Verify that the header displaying {string}")
+	public void verify_that_the_header_displaying(String amount) {
+	  objRevenueCalculator.verifyHeaderandamount(amount);
+	}
+
 
 
 
