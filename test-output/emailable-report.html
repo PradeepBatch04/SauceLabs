@@ -9,15 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Local RUN</th></tr>
-<tr><td><a href="#t0">ORange_HRM</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">64,454</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ORange_HRM</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">166,061</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Local RUN</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ORange_HRM &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1722416438000</td><td rowspan="1">21662</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Local RUN</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ORange_HRM &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.FitPeoRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1722657229816</td><td rowspan="1">155571</td></tr></tbody>
 </table>
-<h2>ORange_HRM</h2><h3 id="m0">runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login into OrangeHRM and Logout&quot;</td><td>&quot;OrangeHRM&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Record not Matched
-	at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
-	at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
-	at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
-	at ✽.Verify record &quot;FMLName1&quot;, &quot;ESS&quot;, &quot;FName LName&quot;, &quot;Enabled&quot; and &quot;EditIcon&quot;(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
-... Removed 1 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ORange_HRM</h2><h3 id="m0">runner.FitPeoRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Adjust the Slider&quot;</td><td>&quot;FitPeo&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [560] but found [820]
+	at pages.fitpeo.RevenueCalculator.verifysliderpositionupdated(RevenueCalculator.java:75)
+	at stepdefination.FitPeoStepdef.verify_slider_s_position_is_updated_to(FitPeoStepdef.java:41)
+	at ✽.verify slider&apos;s position is updated to 560.(file:///E:/Workspace_2023/SauceLab/src/test/resources/Features/FitPeo.feature:10)
+... Removed 7 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -5,6 +5,8 @@ import pages.CartPage;
 import pages.LoginSaucePage;
 import pages.ProductsPage;
 import pages.checkoutpage;
+import pages.fitpeo.HomePageFP;
+import pages.fitpeo.RevenueCalculator;
 import pages.nopcommerence.HomePage;
 import pages.nopcommerence.LoginPage;
 import pages.nopcommerence.ProductPage;
@@ -13,6 +15,8 @@ import pages.orangehrm.HomePageHRM;
 import pages.orangehrm.LoginPageHRM;
 import pages.orangehrm.LogoutPageHRM;
 import pages.orangehrm.RecruitmentPage;
+
+
 
 public class BasePage extends BaseClass{
  
@@ -37,8 +41,21 @@ public class BasePage extends BaseClass{
 	public static RecruitmentPage objhrmRecruitmentPage;
 	
 	
+	/**FitPeo Page*/
+	public static HomePageFP objpeoHomePage;
+	public static RevenueCalculator objRevenueCalculator;
+	
+	
 	
 	public static void PageObectInitialization() {
+		
+		/**FitPep page intialzation**/
+		objpeoHomePage=new HomePageFP(driver);
+		objRevenueCalculator= new RevenueCalculator(driver);
+		
+		
+		
+		
 		ObjLogin = new LoginSaucePage(driver);
 		objProductsPage= new ProductsPage(driver);
 		objCartPage = new CartPage(driver);

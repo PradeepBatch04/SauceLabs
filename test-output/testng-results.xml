@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-31T14:29:55 IST" name="Local RUN" finished-at="2024-07-31T14:31:00 IST" duration-ms="64454">
+  <suite started-at="2024-08-03T09:23:40 IST" name="Local RUN" finished-at="2024-08-03T09:26:26 IST" duration-ms="166061">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@55de24cc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.FitPeoRunner@626abbd0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-07-31T14:29:55 IST" name="ORange_HRM" finished-at="2024-07-31T14:31:00 IST" duration-ms="64454">
-      <class name="runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:29:55 IST" name="setUpClass" finished-at="2024-07-31T14:29:55 IST" duration-ms="325" status="PASS">
+    <test started-at="2024-08-03T09:23:40 IST" name="ORange_HRM" finished-at="2024-08-03T09:26:26 IST" duration-ms="166061">
+      <class name="runner.FitPeoRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.FitPeoRunner@626abbd0]" started-at="2024-08-03T09:23:40 IST" name="setUpClass" finished-at="2024-08-03T09:23:40 IST" duration-ms="663" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@163042ea]]>
+                <![CDATA[org.testng.TestRunner@5919dd67]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:29:55 IST" name="beforeClass" finished-at="2024-07-31T14:30:37 IST" duration-ms="42035" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String)[pri:0, instance:runner.FitPeoRunner@626abbd0]" started-at="2024-08-03T09:23:40 IST" name="beforeClass" finished-at="2024-08-03T09:23:49 IST" duration-ms="8743" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,52 +30,57 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://opensource-demo.orangehrmlive.com/]]>
+                <![CDATA[https://www.fitpeo.com]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:30:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-31T14:30:59 IST" duration-ms="21662" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.FitPeoRunner@626abbd0]" started-at="2024-08-03T09:23:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-03T09:26:25 IST" duration-ms="155571" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login into OrangeHRM and Logout"]]>
+                <![CDATA["Adjust the Slider"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["OrangeHRM"]]>
+                <![CDATA["FitPeo"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Record not Matched]]>
+              <![CDATA[expected [560] but found [820]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Record not Matched
+              <![CDATA[java.lang.AssertionError: expected [560] but found [820]
 at org.testng.Assert.fail(Assert.java:110)
-at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
-at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
-at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
-at ✽.Verify record "FMLName1", "ESS", "FName LName", "Enabled" and "EditIcon"(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:1418)
+at org.testng.Assert.assertEquals(Assert.java:1382)
+at org.testng.Assert.assertEquals(Assert.java:1428)
+at pages.fitpeo.RevenueCalculator.verifysliderpositionupdated(RevenueCalculator.java:75)
+at stepdefination.FitPeoStepdef.verify_slider_s_position_is_updated_to(FitPeoStepdef.java:41)
+at ✽.verify slider's position is updated to 560.(file:///E:/Workspace_2023/SauceLab/src/test/resources/Features/FitPeo.feature:10)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:30:59 IST" name="afterClass" finished-at="2024-07-31T14:31:00 IST" duration-ms="360" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:runner.FitPeoRunner@626abbd0]" started-at="2024-08-03T09:26:25 IST" name="afterClass" finished-at="2024-08-03T09:26:26 IST" duration-ms="770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestNGRunner@55de24cc]" started-at="2024-07-31T14:31:00 IST" name="tearDownClass" finished-at="2024-07-31T14:31:00 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.FitPeoRunner@626abbd0]" started-at="2024-08-03T09:26:26 IST" name="tearDownClass" finished-at="2024-08-03T09:26:26 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.TestNGRunner -->
+      </class> <!-- runner.FitPeoRunner -->
     </test> <!-- ORange_HRM -->
   </suite> <!-- Local RUN -->
 </testng-results>

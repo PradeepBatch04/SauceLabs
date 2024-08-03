@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 31 14:29:55 IST 2024</td>
+<td>Started on:</td><td>Sat Aug 03 09:23:40 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64454 ms)</td>
+<tr><td>Total time:</td><td>166 seconds (166061 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,22 +76,26 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login into OrangeHRM and Logout", "OrangeHRM"</td>
-<td><div><pre>java.lang.AssertionError: Record not Matched
-	at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
-	at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
-	at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
-	at ✽.Verify record &quot;FMLName1&quot;, &quot;ESS&quot;, &quot;FName LName&quot;, &quot;Enabled&quot; and &quot;EditIcon&quot;(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
-... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555928242", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1555928242'><pre>java.lang.AssertionError: Record not Matched
+<td title='runner.FitPeoRunner.runScenario()'><b>runScenario</b><br>Test class: runner.FitPeoRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Adjust the Slider", "FitPeo"</td>
+<td><div><pre>java.lang.AssertionError: expected [560] but found [820]
+	at pages.fitpeo.RevenueCalculator.verifysliderpositionupdated(RevenueCalculator.java:75)
+	at stepdefination.FitPeoStepdef.verify_slider_s_position_is_updated_to(FitPeoStepdef.java:41)
+	at ✽.verify slider&apos;s position is updated to 560.(file:///E:/Workspace_2023/SauceLab/src/test/resources/Features/FitPeo.feature:10)
+... Removed 7 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1196199404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1196199404'><pre>java.lang.AssertionError: expected [560] but found [820]
 	at org.testng.Assert.fail(Assert.java:110)
-	at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
-	at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
-	at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
-	at ✽.Verify record &quot;FMLName1&quot;, &quot;ESS&quot;, &quot;FName LName&quot;, &quot;Enabled&quot; and &quot;EditIcon&quot;(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at pages.fitpeo.RevenueCalculator.verifysliderpositionupdated(RevenueCalculator.java:75)
+	at stepdefination.FitPeoStepdef.verify_slider_s_position_is_updated_to(FitPeoStepdef.java:41)
+	at ✽.verify slider&apos;s position is updated to 560.(file:///E:/Workspace_2023/SauceLab/src/test/resources/Features/FitPeo.feature:10)
 </pre></div></td>
-<td>21</td>
-<td>runner.TestNGRunner@55de24cc</td></tr>
+<td>155</td>
+<td>runner.FitPeoRunner@626abbd0</td></tr>
 </table><p>
 </body>
 </html>

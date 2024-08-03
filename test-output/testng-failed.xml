@@ -3,17 +3,17 @@
 <suite name="Failed suite [Local RUN]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="ORange_HRM(failed)">
     <parameter name="browser" value="chrome"/>
-    <parameter name="URL" value="https://opensource-demo.orangehrmlive.com/"/>
+    <parameter name="URL" value="https://www.fitpeo.com"/>
     <classes>
-      <class name="runner.TestNGRunner">
+      <class name="runner.FitPeoRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="beforeClass"/>
-          <include name="tearDownClass"/>
           <include name="afterClass"/>
           <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- runner.TestNGRunner -->
+      </class> <!-- runner.FitPeoRunner -->
     </classes>
   </test> <!-- ORange_HRM(failed) -->
 </suite> <!-- Failed suite [Local RUN] -->

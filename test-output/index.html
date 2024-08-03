@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Local_RUN" class="navigator-link ">
-                    <span>F:\Java_selenium\Java_selenium\Core Java\NOP_HRM_Sauce\SauceLabs\testngsuite.xml</span>
+                    <span>E:\Workspace_2023\SauceLab\testngsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Local_RUN">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Local_RUN" title="runner.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login into OrangeHRM and Logout&quot;, &quot;OrangeHRM&quot;)">runScenario("Login into OrangeHRM and Logout", "OrangeHRM")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Local_RUN" title="runner.FitPeoRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Adjust the Slider&quot;, &quot;FitPeo&quot;)">runScenario("Adjust the Slider", "FitPeo")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Local_RUN -->
@@ -121,21 +121,20 @@
           <div class="suite-Local_RUN-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">runner.TestNGRunner</span>
+              <span class="class-name">runner.FitPeoRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login into OrangeHRM and Logout&quot;, &quot;OrangeHRM&quot;)">
-                  </a> <!-- runScenario("Login into OrangeHRM and Logout", "OrangeHRM") -->
+                  <a name="runScenario(&quot;Adjust the Slider&quot;, &quot;FitPeo&quot;)">
+                  </a> <!-- runScenario("Adjust the Slider", "FitPeo") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login into OrangeHRM and Logout","OrangeHRM")</span>
-                  <div class="stack-trace">java.lang.AssertionError: Record not Matched
-	at pages.orangehrm.AdminPageHRM.divtable_VerifyRecord(AdminPageHRM.java:169)
-	at pages.orangehrm.AdminPageHRM.verifyRecord(AdminPageHRM.java:103)
-	at stepdefination.OrangeHRMStepdef.verify_record(OrangeHRMStepdef.java:38)
-	at ✽.Verify record &quot;FMLName1&quot;, &quot;ESS&quot;, &quot;FName LName&quot;, &quot;Enabled&quot; and &quot;EditIcon&quot;(file:///F:/Java_selenium/Java_selenium/Core%20Java/NOP_HRM_Sauce/SauceLabs/src/test/resources/Features/OrangeHRM.feature:12)
-... Removed 1 stack frames
+                  <span class="parameters">("Adjust the Slider","FitPeo")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [560] but found [820]
+	at pages.fitpeo.RevenueCalculator.verifysliderpositionupdated(RevenueCalculator.java:75)
+	at stepdefination.FitPeoStepdef.verify_slider_s_position_is_updated_to(FitPeoStepdef.java:41)
+	at ✽.verify slider&apos;s position is updated to 560.(file:///E:/Workspace_2023/SauceLab/src/test/resources/Features/FitPeo.feature:10)
+... Removed 7 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
@@ -146,7 +145,7 @@
         </div> <!-- panel Local_RUN -->
         <div panel-name="test-xml-Local_RUN" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">F:\Java_selenium\Java_selenium\Core Java\NOP_HRM_Sauce\SauceLabs\testngsuite.xml</span>
+            <span class="header-content">E:\Workspace_2023\SauceLab\testngsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -155,9 +154,9 @@
 &lt;suite name=&quot;Local RUN&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;ORange_HRM&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;URL&quot; value=&quot;https://opensource-demo.orangehrmlive.com/&quot;/&gt;
+    &lt;parameter name=&quot;URL&quot; value=&quot;https://www.fitpeo.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runner.TestNGRunner&quot;/&gt;
+      &lt;class name=&quot;runner.FitPeoRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ORange_HRM --&gt;
 &lt;/suite&gt; &lt;!-- Local RUN --&gt;
@@ -208,13 +207,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runner.TestNGRunner')
-data.setCell(0, 3, 21662);
+data.setCell(0, 2, 'runner.FitPeoRunner')
+data.setCell(0, 3, 155571);
 window.suiteTableData['Local_RUN']= { tableData: data, tableDiv: 'times-div-Local_RUN'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Local_RUN">
               </div> <!-- times-div-Local_RUN -->
             </div> <!-- times-div -->
@@ -240,28 +239,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runner.TestNGRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runner.FitPeoRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@163042ea)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5919dd67)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(chrome, https://opensource-demo.orangehrmlive.com/)</span>
-                <span class="method-start">326 ms</span>
+                <span class="method-name">beforeClass(chrome, https://www.fitpeo.com)</span>
+                <span class="method-start">665 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Login into OrangeHRM and Logout", "OrangeHRM")</span>
-                <span class="method-start">42382 ms</span>
+                <span class="method-name">runScenario("Adjust the Slider", "FitPeo")</span>
+                <span class="method-start">9564 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">64061 ms</span>
+                <span class="method-start">165150 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">64421 ms</span>
+                <span class="method-start">165921 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
