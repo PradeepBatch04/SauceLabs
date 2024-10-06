@@ -38,7 +38,10 @@ public class NopcommerceSetdef extends BasePage {
 	public void fill_the_filter_details_of_product(String Productname, String Category, String Published, String SKU) {
 		objnopProductPage.fillFilterdeatis(Productname, Category, Published, SKU);
 	}
-
+   @When("Click on Search button")
+   public void clickOnSearchButton() {
+	   
+   }
 	@Then("Verify the record in Products table {string} {string} {string} {string} {string} {string}")
 	public void verify_the_record_in_products_table(String Productname, String SKU, String Price, String Stockquantity, String Published, String action) {
 		objnopProductPage.verifyProductRecord(Productname, SKU, Price, Stockquantity, Published, action);
@@ -47,4 +50,5 @@ public class NopcommerceSetdef extends BasePage {
 	public void click_on_logout() throws Exception {
 		objnopHomePage.clickOnLogOut();
 	}
+	
 }

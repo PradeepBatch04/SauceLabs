@@ -1,5 +1,7 @@
 Feature: nopcommerce
 #hello busy people
+Background: 
+Given read the test data "<TestCase_ID>" "<Filename>" "Sheet"
   Scenario Outline: Login into nopcommerce and Logout
     When do login using "admin@yourstore.com" and "admin" credentials
     Then verify the dashboard displayed
@@ -15,9 +17,7 @@ Feature: nopcommerce
       | Productname             | Category              | Published      | SKU       | Price | Stockquantity |
       | Build your own computer | Computers >> Desktops | Published only | COMP_CUST |  1200 |         10000 |
       
-      
-      
-      #Search the table --vineesha
+    
 
   Scenario Outline: Login into nopcommerce and verify the product in table in catalog and logout
     When do login using "admin@yourstore.com" and "admin" credentials
