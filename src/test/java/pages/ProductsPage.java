@@ -30,6 +30,9 @@ public class ProductsPage {
 			@FindBy(how = How.XPATH,using = "//div[@class='inventory_item_price']")
 			
 			) private List<WebElement> pricevalueElement;
+	@FindAll(
+			@FindBy(how =How.XPATH,using="//div[@class='inventory_item']//child::div[2]/div/a")
+		)private List<WebElement> productsElements;
 	
 	public ProductsPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -60,7 +63,18 @@ public class ProductsPage {
 		 
 		 
 	}
-	
+	/*adding products to cart*/
+	public void addProductsToCart(String productexpected) {
+		
+		 for(WebElement product:productsElements) {
+		   String productacutal = product.getText().trim();
+		   if(productexpected.equalsIgnoreCase(productacutal)) {
+			   WebElement addcartElement=product.findElement(By.xpath("following::button[contains(text(),'cart')][1]"));
+			   addcartElement.click();	
+			   break;
+		   }
+		 }	
+	}
 	
 ///////////////////////////////////////////////////////////////////////////////	
 	private List<Float> collectPrices(List<WebElement> element){
