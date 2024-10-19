@@ -8,31 +8,30 @@ import common.BasePage;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-
 @CucumberOptions(
 		features = {"src/test/resources/Features/OrangeHRM.feature"}, 	
 		glue = {"stepdefination"},
 		tags = "@Login"
                 
 				)
-public class NopRunner extends AbstractTestNGCucumberTests {
+public class OrangeHRMRunner extends AbstractTestNGCucumberTests {
 
-	@Parameters({"browser","URL"})
-	@BeforeClass
-	public void beforeClass(String browser,String url) {
-		
-		BasePage.launchBrowser(browser);
-		BasePage.getURL(url);
-		BasePage.PageObectInitialization();
-		
-	}
 	
-	@AfterClass
-	public void afterClass() {
-		BasePage.destroyPageObjects();
-		BasePage.quitDriver();
+
+		@Parameters({"browser","URL"})
+		@BeforeClass
+		public void beforeClass(String browser,String url) {
+			
+			BasePage.launchBrowser(browser);
+			BasePage.getURL(url);
+			BasePage.PageObectInitialization();
+			
+		}
 		
-	}
-		
-		   
+		@AfterClass
+		public void afterClass() {
+			BasePage.destroyPageObjects();
+			BasePage.quitDriver();
+			
+		}
 }

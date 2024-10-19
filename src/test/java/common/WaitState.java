@@ -23,7 +23,7 @@ public class WaitState {
 	
 	WebDriver driver;
 
-	 FluentWait<WebDriver> wait1;
+	 FluentWait<WebDriver> wait1; 
 	
 	public WaitState(WebDriver driver) {
 		this.driver=driver;

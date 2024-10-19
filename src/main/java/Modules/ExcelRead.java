@@ -18,7 +18,7 @@ public class ExcelRead {
 	
 	public static HashMap<String, String> dataRead(String testcaseid, String filename,String sheetname){
 		
-		String filepath= System.getProperty("user.dir")+prop.getProperty("testdata")+"\\"+filename;	
+		String filepath= System.getProperty("user.dir")+prop.getProperty("dataPath")+"\\"+filename;	
 		
 		HashMap<String,String> map = new HashMap<String,String>();
 		map.clear();
@@ -31,13 +31,15 @@ public class ExcelRead {
 			int rowcount = (sheet.getLastRowNum()-sheet.getFirstRowNum())+1;
 			int header = sheet.getFirstRowNum();
 			int testcaserow=0;
+			//Get the testcaseID row number
 			for(int i=0;i<rowcount;i++) {
 				String value= dataformtter.formatCellValue(sheet.getRow(i).getCell(0));
 				if(value.equalsIgnoreCase(testcaseid)) {
 					testcaserow=i;
 					break;
 				}
-			}		
+			}	
+			//Get Cells count 
 			int cellcount=sheet.getRow(testcaserow).getLastCellNum();
 			for(int j=0;j<cellcount;j++) {
 				String key=dataformtter.formatCellValue(sheet.getRow(header).getCell(j));

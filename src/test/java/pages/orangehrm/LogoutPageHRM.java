@@ -21,7 +21,7 @@ public class LogoutPageHRM {
 		
 		@FindBy(how = How.XPATH,using = "//ul[@role='menu']/li//a[@role='menuitem']")
 	
-	})private List<WebElement> menuItemsElements;
+	})private List<WebElement> userOptionsElements;
 	
 	
 	public LogoutPageHRM(WebDriver driver) {
@@ -36,13 +36,13 @@ public class LogoutPageHRM {
 	}
 	
 	
-	public void selectMenuItems(String item) throws InterruptedException {
+	public void selectUserdropdown(String item) throws InterruptedException {
 		
-		for(WebElement menuItem:menuItemsElements) {
-		   if(menuItem.isDisplayed()) {
-			   String actualItem=menuItem.getText().trim();
+		for(WebElement option:userOptionsElements) {
+		   if(option.isDisplayed()) {
+			   String actualItem=option.getText().trim();
 				if(item.equalsIgnoreCase(actualItem)) {
-					menuItem.click();
+					option.click();
 					Thread.sleep(8000);
 					System.out.println("Clicked on "+item+" sucessfully.....");
 					break;

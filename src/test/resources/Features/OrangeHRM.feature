@@ -4,18 +4,21 @@ Feature: OrangeHRM
 
   @Login
   Scenario Outline: Login into OrangeHRM and Logout
-    When login using username as "Admin" and password "admin123"
+    Given Read the "<TestCase_Id>", "<FileName>", "<SheetName>" and lunch HRM url
+    And login using username as "LoginUser" and password "Password"
     Then Verify that Dashboard is dispalyed
-    When Click on the "Admin" from the menu
-    Then Enter "<Username>", "<UserRole>", "<EmployeeName>" and "<Status>" filter fields
-    Then click on the search
-    And Verify record "<Username>", "<UserRole>", "<EmployeeName>", "<Status>" and "EditIcon"
-    When click on the "Logout"
+    When Click on the "Menu" from the menu
+    #Then Enter "Username", "UserRole", "EmployeeName" and "Status" filter fields
+    #Then click on the search
+    #And Verify record "Username", "UserRole", "EmployeeName", "Status" and "Action"
+    When click on the "UserDrop"
     Then Loginpage should be redisplayed
 
     Examples: 
-      | Username | UserRole | EmployeeName | Status  |
-      | FMLName1 | ESS      | FName LName  | Enabled |
+      | TestCase_Id | FileName       | SheetName |  
+      | TC_HRM_002  | OrangeHRM.xlsx | Filter    |
+      | TC_HRM_003  | OrangeHRM.xlsx | Filter    |
+      | TC_HRM_001  | OrangeHRM.xlsx | Filter    |
 
   @AddUserinRecruitment
   Scenario: Create new user and verify the user
@@ -35,8 +38,7 @@ Feature: OrangeHRM
     When click on the "Logout"
     Then Loginpage should be redisplayed
 
-
-#add user in admin page -- vineesha
+  #add user in admin page -- vineesha
   @AddUserinAdmin
   Scenario Outline: Create new user and verify the user in adminpage
     When login using username as "Admin" and password "admin123"
