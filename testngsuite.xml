@@ -3,13 +3,13 @@
 
 <suite name="Local RUN" parallel="tests" thread-count="2">
  	
-	<test name="Orange HRM">
+	<test name="Dezlearn">
 		<parameter name="browser" value="chrome" />
-		<parameter name="URL" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+		<parameter name="URL" value="https://www.dezlearn.com/" />
 		<classes>
 			<!--<class name="runner.TestNGRunner" />		-->
 			
-			<class name="runner.OrangeHRMRunner"></class>						
+			<class name="runner.DezlearnRunner"></class>						
 		</classes>
 	</test>
 
